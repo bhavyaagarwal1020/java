@@ -1,0 +1,53 @@
+import java.util.*;
+class Ar
+{ 
+ int l,b,s;
+ double r;
+
+ void Area(int l,int b)
+ {
+  this.l=l;
+  this.b=b;
+  int area=(this.l)*(this.b);
+  System.out.println("The area of rectangle="+area);
+  System.out.println(" ");
+}
+
+ void Area(int s)
+ {
+   this.s=s;
+   int area=(this.s)*(this.s);
+   System.out.println("The area of sqaure="+area);
+   System.out.println(" ");
+ }
+
+ void Area(double r)
+ {
+   this.r=r;
+   double area=3.14*(this.r)*(this.r);
+   System.out.println("The area of circle="+area);
+
+ }
+
+public static void main(String ags[])
+{
+ Scanner sc=new Scanner(System.in);
+ int l,b,s;
+ double r;
+ System.out.println("enter length of rectangle=");
+ l=sc.nextInt();
+ System.out.println("enter breadth of rectangle=");
+ b=sc.nextInt();
+ Ar obj=new Ar();
+ obj.Area(l,b);
+
+ System.out.println("enter side of sqaure=");
+ s=sc.nextInt();
+ obj.Area(s);
+
+ System.out.println("enter radius of circle=");
+ r=sc.nextDouble();
+ obj.Area(r);
+
+}
+}
