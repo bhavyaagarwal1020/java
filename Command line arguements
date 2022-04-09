@@ -1,0 +1,12 @@
+class Sum
+{
+ public static void main(String ags[])
+ {
+   int a,b;
+   a=Integer.parseInt(ags[0]);
+   b=Integer.parseInt(ags[1]);
+   int sum=a+b;
+   System.out.println("sum of two numbers="+sum);
+  }
+}
+    
