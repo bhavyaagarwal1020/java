@@ -1,0 +1,71 @@
+import java.util.*;
+class Bank
+{
+  String name,accountno;
+  double amnt;
+
+  void insert(String nm,String acn,double ori)
+  {
+    name=nm;
+    accountno=acn;
+    amnt=ori;
+  }
+
+  double deposit(double x)
+  {
+    amnt=amnt+x;
+    return amnt;
+  }
+
+  void withdraw(double w)
+  {
+    amnt=amnt-w;
+  }
+
+  void display()
+  {
+    System.out.println("Name="+name);
+    System.out.println("Account number="+accountno);
+    System.out.println("Current money="+amnt);
+    System.out.println(" ");
+  }
+
+  public static void main(String ags[])
+  {
+   String nm,acn;
+   double ori;
+   double x,w; 
+   Scanner sc =new Scanner(System.in);
+   System.out.println("Enter the name=");
+   nm=sc.nextLine();
+   System.out.println("Enter the account number=");
+   acn=sc.nextLine();
+   System.out.println("Enter the original amount=");
+   ori=sc.nextDouble();
+   Bank obj=new Bank();
+   obj.insert(nm,acn,ori);
+   obj.display();
+
+   System.out.println("enter the money to be deposited=");
+   x=sc.nextDouble();
+   double a=obj.deposit(x);
+   obj.display();
+
+   System.out.println("enter the money to be withdrawed=");
+   w=sc.nextDouble();
+   if(w<=a)
+   {
+      System.out.println("Money available for withdrawl");
+      obj.withdraw(w);
+      obj.display();
+   }
+   else
+   {
+       System.out.println("Insufficient Balance");
+   }
+}
+}
+   
+   
+   
+   
