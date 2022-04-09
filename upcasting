@@ -1,0 +1,51 @@
+class Bank
+{
+  double roi;
+  double getROI()
+  {
+    roi=2.0;
+    return roi; 
+  }
+}
+
+class Hdfc extends Bank
+{
+  double getROI()
+  {
+    roi=4.0;
+    return roi;
+  }
+}  
+
+class Sbi extends Bank
+{
+  double getROI()
+  {
+    roi=4.5;
+    return roi;
+  }
+}
+ class Pnb extends Bank
+ {
+  double getROI()
+  {
+   roi=5.0;
+   return roi;
+  }
+ }
+ 
+ class Shubhu
+ {
+   public static void main(String ags[])
+   { 
+   //upcasting 
+    Bank obj =new Hdfc();
+    System.out.println(obj.getROI());
+    
+     obj =new Sbi();
+    System.out.println(obj.getROI());
+    
+     obj =new Hdfc();
+    System.out.println(obj.getROI());
+    }
+ }   
