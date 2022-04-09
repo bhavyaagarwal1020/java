@@ -1,0 +1,53 @@
+import java.util.*;
+class Employee
+{
+   int id;
+   String name,department;
+   double salary;
+   
+   Employee()
+   {
+     id=0;
+     name=" ";
+     department=" ";
+     salary=0.00;
+   }
+
+   void setDetails(int id,String name,String department,double salary)
+   {
+     this.id=id;
+     this.name=name;
+     this.department=department;
+     this.salary=salary;
+   }
+
+   void showDetails()
+   {
+      System.out.println("Id of Employee="+this.id);
+      System.out.println("Name of Employee="+this.name);
+      System.out.println("department of Employee="+this.department);
+      System.out.println("salary of Employee="+this.salary);
+   }
+
+   public static void main(String ags[])
+   { 
+     int id; String name,department; double salary;
+     Scanner sc=new Scanner(System.in);
+     System.out.println("Enter id=");
+     id=sc.nextInt();
+     System.out.println("Enter name=");
+     sc.nextLine();
+     name=sc.nextLine();
+     System.out.println("Enter department=");
+     department=sc.nextLine();
+     System.out.println("Enter salary=");
+     salary=sc.nextDouble();
+     
+     Employee obj=new Employee();
+     obj.setDetails(id,name,department,salary);
+     obj.showDetails();
+    }
+}
+     
+     
+   
