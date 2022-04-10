@@ -1,0 +1,69 @@
+class Append
+{
+  void app()
+  {
+    StringBuffer s=new StringBuffer("Hello");
+    s.append("JAVA");
+    System.out.println(s);
+  }
+}
+
+class Insert
+{
+   void ins()
+   {
+    StringBuffer s=new StringBuffer("Hello");
+    s.insert(1,"JAVA");
+    System.out.println(s);
+   }
+}
+
+class Replace
+{
+   void rep()
+   {
+    StringBuffer s=new StringBuffer("Hello");
+    s.replace(1,3,"JAVA");
+    System.out.println(s);
+   }
+}
+
+class Delete
+{
+   void del()
+   {
+    StringBuffer s=new StringBuffer("Hello");
+    s.delete(1,3);
+    System.out.println(s);
+   }
+}
+
+class Reverse
+{
+   void rev()
+   {
+    StringBuffer s=new StringBuffer("Hello");
+    s.reverse();
+    System.out.println(s);
+   }
+}
+
+class Strbuff
+{
+ public static void main(String ags[])
+  {
+   Append a=new Append();
+   a.app();
+
+   Insert b=new Insert();
+   b.ins();
+   
+   Replace c=new Replace();
+   c.rep();
+
+   Delete d=new Delete();
+   d.del();
+   Reverse e=new Reverse();
+   e.rev();
+   }
+}
