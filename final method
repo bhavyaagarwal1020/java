@@ -1,0 +1,19 @@
+class ff
+{
+ final void display()
+  {
+   System.out.println("Khargosh");
+  }
+}
+ 
+class Fin extends ff
+{
+ public static void main(String ags[])
+  {
+   Fin obj=new Fin();
+   obj.display();
+  }
+}
+
+//final variables can't be changed, final methods can't be overridden,final classes can't be inherited.
+//final methods can't be overridden but they can be inherited.
