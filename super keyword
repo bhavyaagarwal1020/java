@@ -1,0 +1,33 @@
+class A
+{
+    int val=5;
+    void display()
+    {
+     System.out.println("value in parent class="+val);
+    }
+}
+
+class B extends A
+{
+ int val=10;
+ void display()
+ {
+  System.out.println("value in chid class"+val);
+ }
+ 
+ void show()
+ {
+   super.display();//invoking method of parent class.
+   display();//invoking method of chid class.
+ }
+}
+
+class C 
+{
+ public static void main(String ags[])
+  {
+    B obj =new B();
+    obj.show();
+    
+  }
+}
