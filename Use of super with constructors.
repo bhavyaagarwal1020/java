@@ -1,5 +1,5 @@
 //Use of super with constructors.
-
+class C1
 {
   C1()
   {
