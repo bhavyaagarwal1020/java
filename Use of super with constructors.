@@ -1,0 +1,24 @@
+//Use of super with constructors.
+
+{
+  C1()
+  {
+    System.out.println("KHARGOSH");
+  }
+}
+  
+class C2 extends C1
+{
+  C2()
+  {
+    System.out.println("MENDAK");
+  }
+}
+ 
+class Main
+{
+  public static void main(String ags[])
+  {
+    C2 obj =new C2();
+  }
+}
