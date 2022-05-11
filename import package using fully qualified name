@@ -1,0 +1,40 @@
+//save by C1.java
+
+package p1;
+
+public class C1
+{
+ public int sum(int a,int b)
+  {
+    return a+b;
+  }
+  
+ public float division(float x,float y)
+  {
+    return x/y;
+  }
+  
+  public int multiplication(int p,int q)
+   { 
+    return p*q;
+   }
+ }
+ 
+// to complie package javac -d. filename.java
+ 
+ 
+
+//save by C2.java
+package p2
+ class C2
+ {
+   public static void main(String ags[])
+    {
+     p1.C1 obj=new p1.C1(); //using fully qualified name.
+     Systemobj.sum(5,6);
+     obj.division(10/5);
+     obj.multiplication(5,6);
+    }
+ } 
+ // to compiled javac -d . filename.java
+ //to run java p2.C2
