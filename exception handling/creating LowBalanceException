@@ -1,0 +1,63 @@
+import java.util.*;
+class LowBalanceException extends RuntimeException
+{
+   LowBalanceException()
+   {}
+   
+     LowBalanceException(String s)
+     {
+      super(s);
+      }
+        
+   }     
+      
+ class A
+ {
+  double amnt =10000.00;
+  double getval(Scanner sc)
+  {
+    System.out.println("enter amount to be withdrawed");
+    double y= sc.nextDouble();
+    return y;
+    }
+    
+  void withdraw(double x)
+  {
+  if(x<amnt)
+  { 
+    amnt=amnt-x;
+    System.out.println("amount left="+amnt);
+  }
+    else
+    {
+      throw new LowBalanceException();
+    }  
+  }
+  public static void main(String ags[])
+  {
+  double x;
+   Scanner sc=new Scanner(System.in);
+   //System.out.println("enter amount to be withdrawed=");
+   A a=new A();
+   x=a.getval(sc);
+   
+   try
+   {
+   a.withdraw(x);
+   throw new LowBalanceException();
+   }
+   
+   catch(LowBalanceException e)
+   {
+    System.out.println("INSUFFICIENT BALANCE");
+    System.out.println("Please enter some lower amount");
+   x= a.getval(sc);
+    a.withdraw(x);
+    }
+    
+    finally
+    {
+         System.out.println("Thankyou for using the bank");
+   }
+ }  
+ }
