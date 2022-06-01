@@ -1,0 +1,44 @@
+class Myt1 extends Thread
+{
+ public void run()
+ {
+  int i;
+   for(i=0;i<=10;i++)
+   {
+    System.out.println("JAVA");
+   }
+  }
+}  
+
+class Myt2 extends Thread
+{
+ public void run()
+ {
+  int i;
+   for(i=0;i<=10;i++)
+   {
+    System.out.println("PROGRAMMING");
+   }
+  }
+}
+  
+ class Myt3 extends Thread
+ {
+   public void run()
+   {
+    int i;
+   for(i=0;i<=10;i++)
+   {
+    System.out.println("LANGUAGE");
+   }
+   }
+  public static void main(String ags[])
+  {
+    	Myt1 a=new Myt1(); //newborn state
+    	Myt2 b=new Myt2(); //newborn state
+    	Myt3 c=new Myt3(); //newborn state
+    	a.start(); //runnable state
+    	b.start(); //runnable state
+    	c.start(); //runnable state
+  }  	
+}  
