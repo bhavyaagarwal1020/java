@@ -1,0 +1,24 @@
+import java.io.*;
+class Charby
+{
+ public static void main(String args[])throws IOException
+{
+	FileReader isr =new FileReader("samplefile.txt");
+ 	BufferedReader br= new BufferedReader(isr);
+ 	FileWriter osr=new FileWriter("newfile1.txt");
+ 	BufferedWriter bw=new BufferedWriter(osr);
+ 	int x;
+	 while((x=br.read())!=-1)
+ 	{
+  		bw.write(x);
+             if((char)x!=32)
+  		System.out.print((char)x);
+             else
+             System.out.println(" ");
+ 	}
+      bw.close();
+	osr.close();
+	br.close();
+ 	isr.close();      
+}
+}
