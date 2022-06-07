@@ -1,0 +1,125 @@
+class Myt1 extends Thread
+{
+ public void run()
+ {
+  int i;
+   for(i=0;i<=10;i++)
+   {
+    System.out.println("JAVA");
+   }
+   System.out.println("Thread 1 priority="+Thread.currentThread().getPriority());
+  }
+}  
+
+class Myt2 extends Thread
+{
+ public void run()
+ {
+  int i;
+   for(i=0;i<=10;i++)
+   {
+    System.out.println("PROGRAMMING");
+   }
+    System.out.println("Thread 2 priority="+Thread.currentThread().getPriority());
+  }
+}
+  
+ class Myt3 extends Thread
+ {
+   public void run()
+   {
+    int i;
+   for(i=0;i<=10;i++)
+   {
+    System.out.println("LANGUAGE");
+   }
+    System.out.println("Thread 3 priority="+Thread.currentThread().getPriority());
+   }	
+}
+
+class Nameprior
+{
+  public static void main(String ags[])
+  {
+    	Myt1 a=new Myt1(); //newborn state
+    	Myt2 b=new Myt2(); //newborn state
+    	Myt3 c=new Myt3(); //newborn state
+    	a.start(); //runnable state
+    	b.start(); //runnable state
+
+      c.setPriority(10);
+    	c.start(); //runnable state
+      System.out.println("Thread 1 name="+a.getName());
+      System.out.println("Thread 2 name="+b.getName());
+      System.out.println("Thread 3 name="+c.getName());
+      
+      c.setName("MY THRIRD THREAD");
+      System.out.println("Thread 3 name="+c.getName());
+      
+  
+      System.out.println("Thread 3 priority="+c.getPriority());
+      
+     } 
+  }  class Myt1 extends Thread
+{
+ public void run()
+ {
+  int i;
+   for(i=0;i<=10;i++)
+   {
+    System.out.println("JAVA");
+   }
+   System.out.println("Thread 1 priority="+Thread.currentThread().getPriority());
+  }
+}  
+
+class Myt2 extends Thread
+{
+ public void run()
+ {
+  int i;
+   for(i=0;i<=10;i++)
+   {
+    System.out.println("PROGRAMMING");
+   }
+    System.out.println("Thread 2 priority="+Thread.currentThread().getPriority());
+  }
+}
+  
+ class Myt3 extends Thread
+ {
+   public void run()
+   {
+    int i;
+   for(i=0;i<=10;i++)
+   {
+    System.out.println("LANGUAGE");
+   }
+    System.out.println("Thread 3 priority="+Thread.currentThread().getPriority());
+   }	
+}
+
+class Nameprior
+{
+  public static void main(String ags[])
+  {
+    	Myt1 a=new Myt1(); //newborn state
+    	Myt2 b=new Myt2(); //newborn state
+    	Myt3 c=new Myt3(); //newborn state
+    	a.start(); //runnable state
+    	b.start(); //runnable state
+
+      c.setPriority(10);
+    	c.start(); //runnable state
+      System.out.println("Thread 1 name="+a.getName());
+      System.out.println("Thread 2 name="+b.getName());
+      System.out.println("Thread 3 name="+c.getName());
+      
+      c.setName("MY THRIRD THREAD");
+      System.out.println("Thread 3 name="+c.getName());
+      
+  
+      System.out.println("Thread 3 priority="+c.getPriority());
+      
+     } 
+  }  
