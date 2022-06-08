@@ -1,0 +1,47 @@
+import java.sql.*;
+class B
+{
+  public static void main(String ags[])
+   {
+    Connection con=null;
+     try
+     {
+       Class.forName("com.mysql.jdbc.Driver");
+       System.out.println("Driver registered");
+     }
+     catch(Exception e)
+     {
+      System.out.println("Driver not registered");
+     }
+     
+     try
+     { 
+      con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Bhavi?autoReconnect=true&useSSL=false","root","gehu");
+      System.out.println("Connection established");
+      }
+     catch(Exception e)
+     {
+      System.out.println("connection not established");
+     }
+     
+     try
+     {
+      Statement st=con.createStatement();
+      st.executeUpdate("insert into emp (id,name)values(15,'Ravi')");
+      System.out.println("Statement established");
+       ResultSet rs=st.executeQuery("select * from emp");
+     while(rs.next()) //start from 1st row,iterates itself till last row
+     {
+      System.out.print(rs.getInt(1));
+       System.out.println(rs.getString(2));
+      }
+     }
+     catch(Exception e)
+     {
+      System.out.println("Statement not established");
+    }
+     
+    
+      
+  }   
+  }
